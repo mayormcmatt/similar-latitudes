@@ -2,13 +2,27 @@
 	width: 100%;
 	height: 100vh;
 	display: flex;
-	justify-content: center;
+	flex-direction: column;
 }
 
-.main__title {
+.text-container {
+	margin: 0 auto;
+	width: 1000px;
+}
+
+.text-container__title {
 	text-align: center;
 }
 
-.main__description {
+.text-container__description {
+	font-size: 1.3em;
+}
+
+.input-container__input {
+	display: block;
+	margin: 0 auto;
+	height: 24px;
+	width: 300px;
+	padding: 5px;
 	font-size: 1.2em;
 }
