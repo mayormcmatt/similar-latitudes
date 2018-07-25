@@ -22,12 +22,12 @@ document.addEventListener('DOMContentLoaded', function () {
 		// #3 Into matchedCities feed the arguments: value of typing, city data JSON
 		// const matchedCities = processSearchInputs(this.value, citiesData);
 		matchedCities = processSearchInputs(this.value, citiesData);
-		// console.log(matchedCities);
 		// #4 Inject into DOM the results of matching text with cities
 		const html = matchedCities.map(city => {
 			return `
 				<li data-city="${city.city}">
-					<span>${city.city}, ${city.country}</span>
+					<span>${city.city}</span>
+					<span>${city.country}</span>
 					<span>${city.lat}, ${city.lng}</span>
 				</li>
 			`;
@@ -42,7 +42,6 @@ document.addEventListener('DOMContentLoaded', function () {
 		});
 		// #7 Pull out latitude data
 		const targetLat = targetCity[0].lat;
-		// console.log(targetLat)
 		// #8 From original cities array, return array of matches within X lat degrees, in this case 1 degree
 		return citiesData.filter(city => {
 			return city.lat < targetLat + 1 && city.lat > targetLat - 1
@@ -55,7 +54,8 @@ document.addEventListener('DOMContentLoaded', function () {
 		const html = latMatchedCities.map(city => {
 			return `
 				<li data-city="${city.city}">
-					<span>${city.city}, ${city.country}</span>
+					<span>${city.city}</span>
+					<span>${city.country}</span>
 					<span>${city.lat}, ${city.lng}</span>
 				</li>
 			`;
@@ -68,7 +68,6 @@ document.addEventListener('DOMContentLoaded', function () {
 		// #5 Get data attribute city name, feed it into processLatMatch function
 		if (e.target && e.target.nodeName === "SPAN") {
 			selectedCity = e.target.parentElement.dataset.city;
-			// console.log(e.target.parentElement.dataset.city);
 			showLatMatches()
 		}
 	});
