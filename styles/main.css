@@ -54,7 +54,7 @@ li span {
 	width: 30%;
 }
 
-li:hover {
+.output-container__list li:hover {
 	background-color: aquamarine;
 	cursor: pointer;
 }

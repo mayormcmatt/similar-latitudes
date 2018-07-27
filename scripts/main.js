@@ -20,7 +20,6 @@ document.addEventListener('DOMContentLoaded', function () {
 	// #2 On keyup in search field, showSearchResults fires
 	function showSearchResults() {
 		// #3 Into matchedCities feed the arguments: value of typing, city data JSON
-		// const matchedCities = processSearchInputs(this.value, citiesData);
 		matchedCities = processSearchInputs(this.value, citiesData);
 		// #4 Inject into DOM the results of matching text with cities
 		const html = matchedCities.map(city => {
