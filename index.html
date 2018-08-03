@@ -5,7 +5,6 @@
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<meta http-equiv="X-UA-Compatible" content="ie=edge">
-		<script src="scripts/main.js"></script>
 		<link rel="stylesheet" href="styles/main.css">
 		<link href="https://fonts.googleapis.com/css?family=Fira+Sans:100,200,300,400" rel="stylesheet">
 		<title>Cities At Similar Latitudes</title>
@@ -29,12 +28,30 @@
 				<input type="text" class="input-container__input" placeholder="Enter name of city here">
 			</div>
 
-			<div class="output-container">
-				<ul class="output-container__list"></ul>
+			<table>
+				<thead>
+					<tr class="output-container__header-row">
+						<th id="city-sort" onclick="sort_table(searchOutput, 0, asc1); asc1 *= -1; asc2 = 1; asc3 = 1;">City</th>
+						<th id="country-sort" onclick="sort_table(searchOutput, 1, asc2); asc2 *= -1; asc3 = 1; asc1 = 1;">Country</th>
+						<th id="lat-long-sort" onclick="sort_table(searchOutput, 2, asc3); asc3 *= -1; asc1 = 1; asc2 = 1;">Lat./Long.</th>
+					</tr>
+				</thead>
+				<tbody class="output-container__table"></tbody>
+			</table>
 
-				<ul class="output-container__lat-match"></ul>
-			</div>
+			<table>
+				<thead>
+					<tr class="output-container__lat-match-header">
+						<th>City</th>
+						<th>Country</th>
+						<th>Lat./Long.</th>
+					</tr>
+				</thead>
+				<tbody class="output-container__lat-match"></tbody>
+			</table>
 		</div>
 	</body>
+
+	<script src="scripts/main.js"></script>
 
 </html>

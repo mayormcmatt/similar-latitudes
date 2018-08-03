@@ -2,6 +2,7 @@ html {
 	font-family: 'Fira Sans', sans-serif;
 	font-size: 16px;
 }
+
 .main {
 	width: 100%;
 	height: auto;
@@ -26,6 +27,27 @@ html {
 	font-weight: 300;
 }
 
+table {
+	width: 1000px;
+	margin-top: 40px;
+}
+
+th {
+	width: 33%;
+}
+
+.output-container__header-row th,
+.output-container__table td,
+.output-container__lat-match-header th {
+	font-weight: 200;
+	font-size: 1.2rem;
+	cursor: pointer;
+}
+
+.output-container__table td {
+	background-color: aquamarine;
+}
+
 .input-container__input {
 	display: block;
 	margin: 0 auto;
@@ -35,26 +57,11 @@ html {
 	font-size: 1.2em;
 }
 
-.output-container {
-	width: 1000px;
+.output-container__lat-match-header {
+	display: none;
 }
 
-.output-container__list,
-.output-container__lat-match {
-	width: 80%;
-	margin: 40px auto;
-	padding: 0;
-	list-style: none;
-	font-size: 1.2rem;
+.output-container__lat-match td {
 	font-weight: 200;
-}
-
-li span {
-	display: inline-block;
-	width: 30%;
-}
-
-.output-container__list li:hover {
-	background-color: aquamarine;
-	cursor: pointer;
+	font-size: 1.2rem;
 }
