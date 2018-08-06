@@ -36,6 +36,15 @@ th {
 	width: 33%;
 }
 
+.output-container__header-row th {
+	transition: all 0.2s ease;
+}
+
+.output-container__header-row th:hover {
+	background-color: #333;
+	color: white;
+}
+
 .output-container__header-row th,
 .output-container__table td,
 .output-container__lat-match-header th {
